@@ -1,12 +1,12 @@
 # Sistema de Gerenciamento de Pedidos
 
-Meu primeiro projeto utilizando PostgreSQL para praticar modelagem de banco de dados, SQL e PL/pgSQL.
+projeto utilizando PostgreSQL para praticar modelagem de banco de dados, SQL e PL/pgSQL.
 
-O objetivo foi colocar em prática os principais conceitos aprendidos durante os estudos e desenvolver um projeto para meu portfólio.
+O objetivo deste projeto foi colocar em prática os principais conceitos de banco de dados e desenvolver um sistema de gerenciamento de pedidos para compor meu portfólio.
 
 ---
 
-## Tecnologias
+## Tecnologias Utilizadas
 
 - PostgreSQL
 - PL/pgSQL
@@ -18,41 +18,60 @@ O objetivo foi colocar em prática os principais conceitos aprendidos durante os
 
 ## Estrutura do Projeto
 
-```
+```text
 Sistema-Gerenciamento-Pedidos
 │
 ├── README.md
-├── sql
-│   ├── 01_criacao_tabelas.sql
-│   ├── 02_inserts.sql
-│   ├── 03_consultas.sql
-│   ├── 04_views.sql
-│   ├── 05_indices.sql
-│   ├── 06_functions.sql
-│   ├── 07_triggers.sql
-│   ├── 08_procedures.sql
-│   └── 09_testes.sql
+├── LICENSE
 │
-└── imagens
+├── imagens
+│   ├── modelo-banco.png
+│   ├── consulta-pedidos.png
+│   └── historico-status.png
+│
+└── sql
+    ├── 01_criacao_tabelas.sql
+    ├── 02_inserts.sql
+    ├── 03_consultas.sql
+    ├── 04_views.sql
+    ├── 05_indices.sql
+    ├── 06_functions.sql
+    ├── 07_triggers.sql
+    ├── 08_procedures.sql
+    └── 09_testes.sql
 ```
 
 ---
 
-## Tabelas
+## Modelo do Banco de Dados
+
+O sistema é composto pelas seguintes tabelas:
 
 - Clientes
 - Produtos
 - Pedidos
 - Itens do Pedido
-- Histórico de Pedidos
-- Log de Pedidos
 - Histórico de Status
+- Log de Pedidos
 
 ---
 
-## Conceitos aplicados
+## Funcionalidades
 
-Neste projeto foram aplicados os seguintes conceitos:
+- Cadastro de clientes
+- Cadastro de produtos
+- Criação de pedidos
+- Cancelamento de pedidos
+- Registro automático de logs
+- Histórico de alteração de status
+- Consultas utilizando Views
+- Otimização de consultas com índices
+
+---
+
+## Conceitos Aplicados
+
+Durante o desenvolvimento deste projeto foram utilizados:
 
 - Criação de tabelas
 - Primary Key
@@ -70,7 +89,7 @@ Neste projeto foram aplicados os seguintes conceitos:
 - HAVING
 - Subqueries
 - Views
-- Index
+- Índices
 - EXPLAIN ANALYZE
 - Functions
 - Procedures
@@ -80,22 +99,35 @@ Neste projeto foram aplicados os seguintes conceitos:
 
 ---
 
-## Funcionalidades
+## Imagens do Projeto
 
-- Cadastro de clientes
-- Cadastro de produtos
-- Criação de pedidos
-- Cancelamento de pedidos
-- Registro automático de logs
-- Histórico de alteração de status
-- Consultas utilizando Views
-- Otimização de consultas com índices
+### Modelo do Banco de Dados
+
+Diagrama das principais tabelas e seus relacionamentos.
+
+![Modelo do Banco](imagens/modelo-banco.png)
 
 ---
 
-## Como executar
+### Consulta da View de Pedidos
 
-Execute os arquivos na seguinte ordem:
+Exemplo de consulta realizada através da view `vw_pedidos`.
+
+![Consulta Pedidos](imagens/consulta-pedidos.png)
+
+---
+
+### Histórico de Alteração de Status
+
+Exemplo do histórico gerado automaticamente pelas triggers após alterações no status dos pedidos.
+
+![Histórico Status](imagens/historico-status.png)
+
+---
+
+## Como Executar
+
+Execute os arquivos SQL na seguinte ordem:
 
 1. 01_criacao_tabelas.sql
 2. 02_inserts.sql
@@ -111,18 +143,12 @@ Execute os arquivos na seguinte ordem:
 
 ## Objetivo
 
-Este projeto foi desenvolvido para consolidar meus conhecimentos em PostgreSQL e servir como projeto de portfólio para a área de Banco de Dados.
-
----
-
-## Próximos projetos
-
-- Sistema de Biblioteca
-- Sistema Bancário
-- E-commerce
+Este projeto foi desenvolvido para consolidar meus conhecimentos em PostgreSQL, praticar recursos avançados da linguagem SQL e servir como parte do meu portfólio para a área de Banco de Dados.
 
 ---
 
 ## Autor
 
-André Campos
+**André Campos**
+
+Graduado em Banco de Dados e em constante evolução na área de desenvolvimento e bancos de dados.
